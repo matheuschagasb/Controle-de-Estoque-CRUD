@@ -5,9 +5,9 @@ print ("PROGRAMA DE CONTROLE DE ESTOQUE DE PRODUTOS")
 import mysql.connector #importando a biblioteca mysql
 
 conexao = mysql.connector.connect( #Objeto de conexao
-    host= 'localhost',
-    database='ProjetoIntegrador',
-    user= 'root',
+    host= '',
+    database='',
+    user= '',
     password= '')
 
 if conexao.is_connected(): #Avaliar conexao com banco de dados
