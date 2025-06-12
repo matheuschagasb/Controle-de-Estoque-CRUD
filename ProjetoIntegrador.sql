@@ -1,28 +1,28 @@
-create database ProjetoIntegrador;
+CREATE DATABASE IF NOT EXISTS controleEstoque
+  DEFAULT CHARACTER SET utf8mb4
+  DEFAULT COLLATE utf8mb4_unicode_ci;
 
-use ProjetoIntegrador;
+USE controleEstoque;
 
-create table produtos(
-codigo int not null,
-nome varchar (50) not null, 
-descricao varchar(50) not null, 
-custo_produto decimal (10,2) not null,
-custo_fixo decimal (5,2) not null,
-comissao decimal (5,2) not null,
-imposto decimal (5,2) not null, 
-margem_lucro decimal (5,2) not null,
-primary key (codigo)
+CREATE TABLE IF NOT EXISTS produtos (
+  codigo INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  descricao VARCHAR(100) NOT NULL,
+  custo_produto DECIMAL(10,2) NOT NULL CHECK (custo_produto >= 0),
+  custo_fixo DECIMAL(5,2) NOT NULL CHECK (custo_fixo >= 0),
+  comissao DECIMAL(5,2) NOT NULL CHECK (comissao >= 0),
+  imposto DECIMAL(5,2) NOT NULL CHECK (imposto >= 0),
+  margem_lucro DECIMAL(5,2) NOT NULL,
+  PRIMARY KEY (codigo)
 );
 
-#drop table produtos;
-
-insert into produtos values 
-('1', 'Caneta', 'Caneta profissional', '36', '15', '5', '12', '20'),
-('2', 'Lapis', 'Preto B2', '1', '1', '1', '1', '1'),
-('3', 'Caderno', 'Palmeiras', '10', '10', '10', '10', '50'),
-('4', 'Caderno', 'São Paulo', '10', '10', '10', '10', '0'),
-('5', 'Caderno', 'Corinthians', '10', '10', '10', '10', '-20'),
-('6', 'Caderno', 'Ponte Preta', '10', '30', '20', '20', '29.99');
+INSERT INTO produtos (nome, descricao, custo_produto, custo_fixo, comissao, imposto, margem_lucro) VALUES
+('Caneta', 'Caneta profissional', 36, 15, 5, 12, 20),
+('Lapis', 'Preto B2', 1, 1, 1, 1, 1),
+('Caderno', 'Palmeiras', 10, 10, 10, 10, 50),
+('Caderno', 'São Paulo', 10, 10, 10, 10, 0),
+('Caderno', 'Corinthians', 10, 10, 10, 10, -20),
+('Caderno', 'Ponte Preta', 10, 30, 20, 20, 29.99);
 
 #delete from produtos where codigo='111';
 
