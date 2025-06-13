@@ -7,6 +7,7 @@ def carregar_agenda_do_banco(cursor):
         agenda.append([str(d) for d in dados])
     return agenda
 
+
 def ondeEsta(nom, agd):
     inicio = 0
     final = len(agd) - 1
