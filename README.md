@@ -1,10 +1,54 @@
-# Projeto Integrador - Cadastro de Controle de Estoque
+# Inventory Control CRUD
 
-# Fase 1:
-<p>O sistema que foi desenvolvido em <b>Python</b> fará a leitura dos valores necessários para o cadastro de algum produto em estoque. E então o sistema fará o cálculo para exibir o Preço de Venda e outras informações (Custo de Aquisição, Receita Bruta, Custo Fixo, Comissão de Venda, Impostos, Outros Custos e Rentabilidade) em uma tabela. Além de uma classificação de lucro dependendo da rentabilidade gerada pelo produto.</p>
+This project is a simple inventory control system with product registration, update, listing, and deletion operations, implemented in Python.  
+Product data is stored in a MySQL database, and the system uses an in-memory agenda for fast operations during execution.
 
-# Fase 2:
-<p>Criação de um Banco de Dados no <b>MySQL</b> para inserir de forma manual os produtos que antes era pedido no Programa. Mudanças no código em <b>Python</b> para realizar a conexão com o Banco de Dados e fazer a leitura dos dados inseridos no Banco para exibir os mesmos parâmetros da fase 1 (Preço de Venda e Classificação de Lucro em tabelas).</p>
+## Setup
 
-# Fase 3: 
-<p>Realização de um <b>Crud</b> no código em <b>Python</b> para inserção, listagem, atualização e exclusão de produtos e que altere o Banco de Dados <b>MySQL</b> automaticamente e faça todo o processo de cálculos e exibições padrões em tabelas.</p>
+It is recommended to use a Python virtual environment to manage dependencies.  
+To create and activate a virtual environment, run:
+
+```
+python -m venv venv
+# On Windows:
+venv\Scripts\activate
+# On Linux/macOS:
+source venv/bin/activate
+```
+
+Then, install the required dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+## Configuration
+Create a .env file in the project root with your database connection details, for example:
+
+DB_HOST=localhost
+DB_USER=your_user
+DB_PASSWORD=your_password
+DB_NAME=inventory_control
+
+## Usage
+
+To run the program, use:
+
+```
+python app/main.py
+```
+
+The main menu allows you to:
+
+- Add Product
+- Update Product
+- List Products
+- Delete Product
+- Exit Program
+During execution, data is kept in memory and synchronized with the database.
+When the program ends, the products table is automatically cleared.
+
+## Notes
+- This project is for educational purposes and does not handle all edge cases or large datasets.
+- The code is organized into modules for easier maintenance and understanding.
+- To run on other operating systems, ensure Python and MySQL are properly installed and configured.
