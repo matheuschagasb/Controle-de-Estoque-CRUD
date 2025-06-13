@@ -25,10 +25,10 @@ pip install -r requirements.txt
 ## Configuration
 Create a .env file in the project root with your database connection details, for example:
 
-DB_HOST=localhost
-DB_USER=your_user
-DB_PASSWORD=your_password
-DB_NAME=inventory_control
+DB_HOST=localhost<br>
+DB_USER=your_user<br>
+DB_PASSWORD=your_password<br>
+DB_NAME=inventory_control<br>
 
 ## Usage
 
@@ -44,7 +44,8 @@ The main menu allows you to:
 - Update Product
 - List Products
 - Delete Product
-- Exit Program
+- Exit Program<br>
+  <br>
 During execution, data is kept in memory and synchronized with the database.
 When the program ends, the products table is automatically cleared.
 
