@@ -10,11 +10,10 @@ To create and activate a virtual environment, run:
 
 ```
 python -m venv venv
-# On Windows:
-venv\Scripts\activate
-# On Linux/macOS:
-source venv/bin/activate
 ```
+On Windows: ```venv\Scripts\activate```<br>
+On Linux/macOS: ```source venv/bin/activate```
+
 
 Then, install the required dependencies:
 
