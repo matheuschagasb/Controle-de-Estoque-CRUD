@@ -16,13 +16,13 @@ CREATE TABLE IF NOT EXISTS produtos (
   PRIMARY KEY (codigo)
 );
 
-INSERT INTO produtos (nome, descricao, custo_produto, custo_fixo, comissao, imposto, margem_lucro) VALUES
-('Caneta', 'Caneta profissional', 36, 15, 5, 12, 20),
-('Lapis', 'Preto B2', 1, 1, 1, 1, 1),
-('Caderno', 'Palmeiras', 10, 10, 10, 10, 50),
-('Caderno', 'São Paulo', 10, 10, 10, 10, 0),
-('Caderno', 'Corinthians', 10, 10, 10, 10, -20),
-('Caderno', 'Ponte Preta', 10, 30, 20, 20, 29.99);
+#INSERT INTO produtos (nome, descricao, custo_produto, custo_fixo, comissao, imposto, margem_lucro) VALUES
+#('Caneta', 'Caneta profissional', 36, 15, 5, 12, 20),
+#('Lapis', 'Preto B2', 1, 1, 1, 1, 1),
+#('Caderno', 'Palmeiras', 10, 10, 10, 10, 50),
+#('Caderno', 'São Paulo', 10, 10, 10, 10, 0),
+#('Caderno', 'Corinthians', 10, 10, 10, 10, -20),
+#('Caderno', 'Ponte Preta', 10, 30, 20, 20, 29.99);
 
 #delete from produtos where codigo='111';
 
