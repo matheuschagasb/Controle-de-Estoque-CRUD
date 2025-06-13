@@ -48,7 +48,3 @@ The main menu allows you to:
 During execution, data is kept in memory and synchronized with the database.
 When the program ends, the products table is automatically cleared.
 
-## Notes
-- This project is for educational purposes and does not handle all edge cases or large datasets.
-- The code is organized into modules for easier maintenance and understanding.
-- To run on other operating systems, ensure Python and MySQL are properly installed and configured.
