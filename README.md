@@ -37,6 +37,8 @@ To run the program, use:
 python app/main.py
 ```
 
+# Notes
+
 The main menu allows you to:
 
 - Add Product
